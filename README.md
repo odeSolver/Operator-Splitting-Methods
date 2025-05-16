@@ -56,7 +56,7 @@ You can modify each script or initial values to save or display these results as
 
 ## 📌 License
 
-This project is licensed under the [MIT License]. You’re free to use, modify, and distribute it with attribution.
+This project is licensed under the [MIT License](LICENSE). You’re free to use, modify, and distribute it with attribution.
 
 ## 🙋‍♂️ Author
 
