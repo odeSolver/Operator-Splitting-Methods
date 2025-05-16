@@ -1,16 +1,16 @@
-# Differential Equation Solvers (Python)
+# Ordinary Differential Equation Solver (Python)
 
-This repository contains 4 standalone Python scripts that solve various systems of differential equations using a unified method based on my dissertation research.
+This repository contains standalone Python scripts that solve various systems of differential equations using a unified method based on my dissertation research.
 
 ## 📂 Examples
 
-- **Lotka-Volterra** (`example1_lotka_volterra.py`)  
+- **Lotka-Volterra** (`lotka_volterra.py`)  
   Predator-prey model with specified initial values.
 
-- **Van der Pol Oscillator** (`example2_van_der_pol.py`)  
+- **Van der Pol Oscillator** (`van_der_pol.py`)  
   Nonlinear oscillator dynamics.
 
-- **Lorenz System** (`example3_lorenz.py`)  
+- **Lorenz System** (`lorenz.py`)  
   Classic chaotic system.
 
 - **Custom System** (`example4_custom_model.py`)  
