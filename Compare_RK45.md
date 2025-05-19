@@ -8,9 +8,9 @@ This document explains how and why we compare the custom numerical method agains
 
 We solve ODEs of the form:
 
-\[
+$$
 \frac{dy}{dt} = f(t, y), \quad y(t_0) = y_0
-\]
+$$
 
 RK45 estimates two values at each step:
 
