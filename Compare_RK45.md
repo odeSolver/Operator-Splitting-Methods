@@ -14,8 +14,8 @@ The **RK45 method** (also known as the Dormand–Prince method) is a popular ada
 
 RK45 computes two estimates of the next value \( y_{n+1} \) using:
 
-- A **4th-order method**: $ y_{n+1}^{[4]} $  
-- A **5th-order method**: $ y_{n+1}^{[5]} $
+- A **4th-order method**: $$ y_{n+1}^{[4]} $$  
+- A **5th-order method**: $$ y_{n+1}^{[5]} $$
 
 The difference between them gives an estimate of the local truncation error, which is used to adapt the step size \( h \).
 
