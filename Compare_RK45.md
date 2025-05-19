@@ -1,79 +1,96 @@
-# 📈 Compare Against RK45
+# 🧠 Runge-Kutta Method (RK45) for Solving Ordinary Differential Equations
 
-This document explains how and why we compare the custom numerical method against the classical **Runge-Kutta 4(5) method (RK45)**.
-
----
-
-## 🔧 Differential Equation Setup
-
-We solve ODEs of the form:
+The Runge-Kutta methods are a family of iterative techniques used to approximate solutions to ordinary differential equations (ODEs) of the form:
 
 $$
 \frac{dy}{dt} = f(t, y), \quad y(t_0) = y_0
 $$
 
-RK45 estimates two values at each step:
+The **RK45 method** (also known as the Dormand–Prince method) is a popular adaptive step-size method that combines 4th and 5th order Runge-Kutta methods to estimate the local error and adjust the time step accordingly.
 
-- \( y_{n+1}^{[4]} \): 4th-order estimate  
-- \( y_{n+1}^{[5]} \): 5th-order estimate
+---
 
-The difference gives a local error estimate:
+## 🌟 Main Idea
 
-\[
+RK45 computes two estimates of the next value \( y_{n+1} \) using:
+
+- A **4th-order method**: \( y_{n+1}^{[4]} \)  
+- A **5th-order method**: \( y_{n+1}^{[5]} \)  
+
+The difference between them gives an estimate of the local truncation error, which is used to adapt the step size \( h \).
+
+---
+
+## 🧮 RK45 Equations (Simplified Form)
+
+At each step, RK45 computes intermediate stages:
+
+$$
+\begin{align*}
+k_1 &= f(t_n, y_n) \\
+k_2 &= f(t_n + c_2 h, \, y_n + a_{21} h k_1) \\
+k_3 &= f(t_n + c_3 h, \, y_n + a_{31} h k_1 + a_{32} h k_2) \\
+&\vdots \\
+k_6 &= f\left(t_n + c_6 h, \, y_n + \sum_{j=1}^5 a_{6j} h k_j\right)
+\end{align*}
+$$
+
+Then, the next values of \( y \) are approximated by:
+
+$$
+y_{n+1}^{[4]} = y_n + h \sum_{i=1}^6 b_i^{[4]} k_i
+$$
+
+$$
+y_{n+1}^{[5]} = y_n + h \sum_{i=1}^6 b_i^{[5]} k_i
+$$
+
+The error estimate is:
+
+$$
 E = \left| y_{n+1}^{[5]} - y_{n+1}^{[4]} \right|
-\]
+$$
 
 ---
 
-## 🎯 Tolerance Control
+## 📉 Step Size Control with Relative and Absolute Tolerances
 
-RK45 uses two tolerances:
+The local error estimate \( E \) is compared against a user-defined tolerance \( \epsilon \) using the condition:
 
-- `RTOL` (Relative Tolerance): handles large values
-- `ATOL` (Absolute Tolerance): handles small values
-
-A step is accepted if:
-
-\[
+$$
 \frac{|E|}{\text{ATOL} + \text{RTOL} \cdot |y_{n+1}^{[5]}|} < 1
-\]
+$$
+
+Where:
+
+- **ATOL** = Absolute Tolerance  
+- **RTOL** = Relative Tolerance  
+
+This ensures the error is controlled relative to the size of the solution, which is crucial when values vary across magnitudes.
 
 ---
 
-## 🔄 Adaptive Step Size
+## ✅ If the Error is Acceptable
 
-To maintain accuracy and efficiency, the step size is updated as:
+- Accept the step
+- Increase the step size \( h \) to be more efficient
 
-\[
+## ❌ If the Error is Too Large
+
+- Reject the step
+- Decrease \( h \) to improve accuracy
+
+A common formula for adapting the step size is:
+
+$$
 h_{\text{new}} = h \cdot \min\left( \max\left( 0.1, \, 0.84 \cdot \left( \frac{\text{tolerance}}{E} \right)^{1/4} \right), 4.0 \right)
-\]
+$$
 
 ---
 
-## ✅ Why Compare Against RK45?
+## ✏️ Summary for Your Documentation
 
-- RK45 is a gold standard due to its **adaptive step size** and **error control**.
-- It serves as a baseline to validate the **accuracy and stability** of custom solvers.
-- Helps assess whether your fixed-step or alternative method performs within acceptable error bounds.
-
----
-
-## 📊 Optional Error Metrics
-
-To quantify comparison:
-
-- **Relative Error**:
-  \[
-  \text{RelError} = \frac{|y_{\text{custom}} - y_{\text{RK45}}|}{|y_{\text{RK45}}| + \varepsilon}
-  \]
-
-- **Absolute Error**:
-  \[
-  \text{AbsError} = |y_{\text{custom}} - y_{\text{RK45}}|
-  \]
-
-Where \( \varepsilon \) is a small number to avoid division by zero.
-
----
-
-### 📂 File generated as part of: `/Compare_RK45.md`
+- RK45 uses **two approximations** (4th and 5th order) to estimate and control local error.
+- It is **adaptive**, meaning the step size changes to keep the error within a user-defined tolerance.
+- Use **absolute tolerance** to limit error in small solutions.
+- Use **relative tolerance** to scale error for large solutions.
