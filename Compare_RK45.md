@@ -88,7 +88,7 @@ $$
 
 ---
 
-## ✏️ Summary for Your Documentation
+## ✏️ Summary
 
 - RK45 uses **two approximations** (4th and 5th order) to estimate and control local error.
 - It is **adaptive**, meaning the step size changes to keep the error within a user-defined tolerance.
