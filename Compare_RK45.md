@@ -3,24 +3,18 @@
 The Runge-Kutta methods are a family of iterative techniques used to approximate solutions to ordinary differential equations (ODEs) of the form:
 
 $$
-\frac{dy}{dt} = f(t, y), \quad y(t_0) = y_0
+\frac{dy}{dt} = f(t,y), \quad y(t_0) = y_0
 $$
 
-The **RK45 method** (also known as the Dormand–Prince method) is a popular adaptive step-size method that combines 4th and 5th order Runge-Kutta methods to estimate the local error and adjust the time step accordingly.
-
----
+The RK45 method (also known as the Dormand–Prince method) is a popular adaptive step-size method that combines 4th and 5th order Runge-Kutta methods to estimate the local error and adjust the time step accordingly.
 
 ## 🌟 Main Idea
-
 RK45 computes two estimates of the next value \( y_{n+1} \) using:
 
-- A **4th-order method**: $$ y_{n+1}^{[4]} $$  
-- A **5th-order method**: $$ y_{n+1}^{[5]} $$
+- A 4th-order method \( y_{n+1}^{[4]} \)
+- A 5th-order method \( y_{n+1}^{[5]} \)
 
-The difference between them gives an estimate of the local truncation error, which is used to adapt the step size \( h \).
-
----
-
+The difference between them provides an estimate of the local truncation error, which is used to adapt the step size \( h \).
 ## 🧮 RK45 Equations (Simplified Form)
 
 At each step, RK45 computes intermediate stages:
