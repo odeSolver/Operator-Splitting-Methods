@@ -50,9 +50,14 @@ Each script may output:
 
   Solution curves as plots (saved as PNGs or JPGs in results/)
 
-  Comparison graph with RK45 [ For more details on the RK45 method, check out [Compare RK45](Compare_RK45.md) ].
+  Comparison graph with RK45 
 
   You can modify initial values to save or display these results as needed.
+
+## 📌 Comparing RK45  
+
+We implement the Runge-Kutta RK45 method for solving ODEs. You can find a detailed breakdown of the equations, step-by-step methodology, and an example problem in [Compare RK45](Compare_RK45.md).
+
 
 ## 📌 License
 
