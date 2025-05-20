@@ -50,9 +50,9 @@ Each script may output:
 
   Solution curves as plots (saved as PNGs or JPGs in results/)
 
-  Comparison graph with RK45 (if applicable)
+  Comparison graph with RK45 [ For more details on the RK45 method, check out [Compare RK45](Compare_RK45.md) ].
 
-You can modify each script or initial values to save or display these results as needed.
+  You can modify initial values to save or display these results as needed.
 
 ## 📌 License
 
