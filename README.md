@@ -33,7 +33,7 @@ Contents of reeuirement.txt:
 numpy, matplotlib, scipy
 
 ## ▶️ How to Run
-
+Open one of these .py files ad choose your initial value and method of choice. 
 ```bash
 python lotka_volterra.py
 
