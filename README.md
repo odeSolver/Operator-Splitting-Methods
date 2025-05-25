@@ -33,7 +33,7 @@ Contents of reeuirement.txt:
 numpy, matplotlib, scipy
 
 ## ▶️ How to Run
-Open one of these .py files. Inside each file uder 'Initial Parameters', choose your initial values and method of choice (listed). 
+Open one of the .py files. Inside each file uder 'Initial Parameters', choose your initial values and method of choice (listed). 
 ```bash
 python lotka_volterra.py
 
