@@ -1,6 +1,6 @@
 # Ordinary Differential Equation Solver (Python)
 
-This repository contains standalone Python scripts that solve various systems of differential equations using a unified method based on my dissertation research.
+This repository contains standalone Python scripts that solve various systems of differential equations using method of seperation of variable.
 
 ## 📂 Examples
 
@@ -17,7 +17,7 @@ This repository contains standalone Python scripts that solve various systems of
 ## 🧠 Methodology
 
 Each example applies a technique that reduces N-dimensional differential systems into 1D separable parts, then solves them using exponential product formulas (Lie-Trotter, Strang, or Higher order splitting).  
-This approach is from my graduate research.
+
 
 ## 📦 Requirements
 
