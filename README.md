@@ -39,7 +39,6 @@ pyhom van_der_pol.py
 
 python lorenz.py
 
-python airy.py
 ```
 
 | Model                        | Equation Form                                                                                                                                  | Parameters/Description                              |
