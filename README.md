@@ -72,8 +72,6 @@ This project is licensed under the [MIT License](LICENSE). You’re free to use,
 
 **Arun**  
 Ph.D. in Mathematics | M.S. in Applied Statistics  
-📧 Reach out via the contact form on the website or email  
-[LinkedIn](https://www.linkedin.com/in/arunbanjara/) 
 
 ## 🔗 Related Projects
 If you’d like to see a web version of these solvers with interactivity and graph comparisons, visit the Flask Web App version
