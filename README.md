@@ -68,10 +68,14 @@ We implement the Runge-Kutta RK45 method for solving ODEs. You can find a detail
 
 This project is licensed under the [MIT License](LICENSE). You’re free to use, modify, and distribute it with attribution.
 
-## 🙋‍♂️ Author
+## 🙋‍♂️ Authors
 
-**Arun**  
-Ph.D. in Mathematics | M.S. in Applied Statistics  
+**Arun Banjara**  
+Ph.D. in Mathematics | Louisiana State University (LSU) 
+
+**Ibrahem ALJabea**  
+*Co-author*  
+Ph.D. in Mathematics | Louisiana State University (LSU)
 
 ## 🔗 Related Projects
 If you’d like to see a web version of these solvers with interactivity and graph comparisons, visit the Flask Web App version
