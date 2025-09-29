@@ -27,7 +27,7 @@ Install the required packages using:
 pip install -r requirements.txt
 ```
 
-Contents of reeuirement.txt:
+Contents of reuirements.txt:
 numpy, matplotlib, scipy
 
 ## ▶️ How to Run
